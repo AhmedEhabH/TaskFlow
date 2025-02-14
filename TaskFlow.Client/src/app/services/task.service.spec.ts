@@ -7,6 +7,7 @@ import {TestBed} from '@angular/core/testing';
 import {Task} from '../interfaces/task';
 
 import {TaskService} from './task.service';
+import { environment } from '../../environments/environment';
 
 describe('TaskService', () => {
     let service: TaskService;
@@ -28,7 +29,7 @@ describe('TaskService', () => {
         service.getTasks().subscribe(
             tasks => { expect(tasks).toEqual(dummyTasks); });
 
-        const req = httpMock.expectOne('https://localhost:5001/api/Task');
+        const req = httpMock.expectOne(`${environment.apiUrl}/Task`);
         expect(req.request.method).toBe('GET');
         req.flush(dummyTasks);
     });
@@ -39,7 +40,7 @@ describe('TaskService', () => {
         service.createTask(newTask).subscribe(
             task => { expect(task).toEqual({...newTask, id : 1}); });
 
-        const req = httpMock.expectOne('https://localhost:5001/api/Task');
+        const req = httpMock.expectOne(`${environment.apiUrl}/Task`);
         expect(req.request.method).toBe('POST');
         req.flush({...newTask, id : 1});
     });

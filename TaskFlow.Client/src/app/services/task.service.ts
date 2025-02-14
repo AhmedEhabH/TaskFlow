@@ -3,10 +3,11 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 
 import {Task} from '../interfaces/task';
+import { environment } from '../../environments/environment';
 
 @Injectable({providedIn : 'root'})
 export class TaskService {
-    private apiUrl: string = 'https://localhost5001/api/Task'
+    private apiUrl: string = `${environment.apiUrl}/Task`;
     constructor(private http: HttpClient) {}
 
     getTasks(): Observable<Task[]> {
