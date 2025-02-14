@@ -4,10 +4,11 @@ import {
 } from '@angular/common/http/testing';
 import {TestBed} from '@angular/core/testing';
 
+import {environment} from '../../environments/environment';
 import {Task} from '../interfaces/task';
 
 import {TaskService} from './task.service';
-import { environment } from '../../environments/environment';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('TaskService', () => {
     let service: TaskService;
@@ -15,9 +16,14 @@ describe('TaskService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports : [ provideHttpClientTesting ],
-            providers : [ TaskService ]
+            providers: [
+                provideHttpClient(), // ✅ Ensures HttpClient is available
+                provideHttpClientTesting(), // ✅ Properly registers the testing backend
+                TaskService,
+                { provide: 'API_URL', useValue: environment.apiUrl }
+            ]
         });
+
         service = TestBed.inject(TaskService);
         httpMock = TestBed.inject(HttpTestingController);
     });
