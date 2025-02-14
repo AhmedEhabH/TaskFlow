@@ -26,7 +26,7 @@ jobs:
       run: dotnet build TaskFlow.Api/TaskFlow.Api.csproj --configuration Release
 
     - name: Build Test Project
-      run: dotnet build TaskFlow.Api.Tests/TaskFlow.Api.Tests.csproj --configuration Release
+      run: dotnet build TaskFlow.Tests/TaskFlow.Tests.csproj --configuration Release
       
     - name: Run tests
-      run: dotnet test TaskFlow.Api.Tests/TaskFlow.Api.Tests.csproj --configuration Release --no-build
+      run: dotnet test TaskFlow.Tests/TaskFlow.Tests.csproj --configuration Release --no-build
