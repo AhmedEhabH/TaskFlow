@@ -1,0 +1,158 @@
+# .NET General
+**/[Bb]in/
+**/[Oo]bj/
+**/.vs/
+**/launchSettings.json
+*.user
+*.suo
+*.userprefs
+*.nupkg
+*.swp
+*.cache
+*.pidb
+*.pdb
+*.ilk
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages
+**/packages/*
+*.nupkg
+.nuget/
+NuGet.exe
+nuget.config
+
+# Angular/Node.js
+**/node_modules/
+**/dist/
+**/.angular/cache
+**/coverage/
+**/.env
+*.js.map
+*.js
+*.d.ts
+.cache/
+.ng/
+npm-debug.log
+yarn-error.log
+
+# IDE Specific
+.vscode/
+.idea/
+*.sln.iml
+*.csproj.user
+*.jsproj.user
+*.vbproj.user
+
+# Testing
+TestResult.xml
+**/junit.xml
+**/test-results.xml
+
+# Local development
+appsettings.Development.json
+local.settings.json
+
+# Azure Functions
+**/azurite/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+Desktop.ini
+
+# Editor directories and files
+.vs/
+.ionide/
+*.sublime-*
+
+# .NET General
+**/[Bb]in/
+**/[Oo]bj/
+**/.vs/
+**/launchSettings.json
+*.user
+*.suo
+*.userprefs
+*.nupkg
+*.swp
+*.cache
+*.pidb
+*.pdb
+*.ilk
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Ll]og/
+
+# NuGet
+packages/
+.nuget/
+NuGet.exe
+nuget.config
+
+# Angular/Node.js
+**/node_modules/
+**/dist/
+**/.angular/cache
+**/coverage/
+*.js.map
+*.js
+*.d.ts
+.cache/
+
+# Client-specific (TaskFlow.Client)
+TaskFlow.Client/.vscode/
+
+# IDE
+.vscode/
+.idea/
+*.sln.iml
+*.csproj.user
+
+# Testing
+TestResult.xml
+**/junit.xml
+
+# Environment files
+appsettings.Development.json
+local.settings.json
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Azure Functions
+azurite/TaskFlow.Client/.git

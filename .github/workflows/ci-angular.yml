@@ -1,0 +1,35 @@
+name: Angular Client CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22.13.1'
+
+    - name: Install dependencies
+      run: |
+        cd TaskFlow.Client
+        npm install
+
+    - name: Build Angular project
+      run: |
+        cd TaskFlow.Client
+        npm run build -- --configuration production
+
+    - name: Run Angular tests
+      run: |
+        cd TaskFlow.Client
+        npm run test -- --watch=false --browsers=ChromeHeadless
