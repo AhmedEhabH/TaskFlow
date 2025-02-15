@@ -62,7 +62,7 @@ namespace TaskFlow.Api.Services
 
             // Generate JWT token
             var token = await GenerateJwtToken(user);
-            return token;
+            return $"Bearer {token}";
         }
 
         public async Task<bool> RegisterAsync(string username, string password)

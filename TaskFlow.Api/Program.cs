@@ -12,6 +12,7 @@ builder.Logging.ConfigureLogging();
 // Add services to the container.
 // Configure services
 builder.Services.ConfigureServices(builder.Configuration);
+builder.Services.ConfigureSwagger(builder.Configuration);
 
 // Configure database
 builder.Services.ConfigureDatabase(builder.Configuration);
