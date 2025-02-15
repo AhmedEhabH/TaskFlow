@@ -4,6 +4,8 @@ using TaskFlow.Api.Controllers;
 using TaskFlow.Api.Models;
 using Xunit;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace TaskFlow.Tests;
 
@@ -13,7 +15,8 @@ public class TaskControllerTests
 
     public TaskControllerTests()
     {
-        _controller = new TaskController();
+        var loggerMock = new Mock<ILogger<TaskController>>();
+        _controller = new TaskController(loggerMock.Object);
     }
 
     [Fact]
